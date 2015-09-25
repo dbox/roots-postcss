@@ -1,0 +1,27 @@
+// Mixin: Equal widths
+//
+// Use on a parent element to set equal widths for an unknown number of children.
+// Note: This will render individual css classes for every number up to the maxItems.
+//
+// ex: equal-widths()
+// ex: equal-widths: 20
+// ex: equal-widths(50, div, 30)
+
+
+equal-widths(gutter=0px, selector=li, maxItems=10)
+  for count in (1..maxItems)
+    {selector}:nth-last-child({count}):first-child
+    {selector}:nth-last-child({count}):first-child ~ {selector}
+
+      countAdjust = count - 1
+      equalSlice = unit((100 / count), '%')
+      unitType = unit(gutter)
+      gutterAdjust = unit((gutter * (countAdjust) / count), unitType)
+      gutter = unit((gutter), unitType)
+      width: "calc(%s - %s)" % (equalSlice gutterAdjust)
+      margin-right: gutter
+
+  {selector}
+    float: left
+    &:last-child
+      margin-right: 0 !important

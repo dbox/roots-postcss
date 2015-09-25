@@ -1,0 +1,7 @@
+# manifest.yml
+- vendor/jquery-1.11.2.js
+- vendor/jquery.ba-hashchange.js
+- vendor/jQuery.headroom.js
+- vendor/jquery.waypoints.js
+- vendor/headroom.js
+- main.coffee

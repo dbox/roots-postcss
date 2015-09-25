@@ -1,0 +1,81 @@
+//
+// Typography
+// –––––––––––––––––––––––––––––––––––––––––––
+
+// font stack (add your own!)
+// helvetica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
+// helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif
+// georgia = Georgia, Cambria, "Times New Roman", Times, serif
+// lucidia-grande = "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
+// monospace = unquote("'Bitstream Vera Sans Mono', Consolas, Courier, monospace")
+// verdana = Verdana, Geneva, sans-serif
+
+$main-font = "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+.defaultType
+  font-family: $main-font
+  font-weight: normal
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+
+
+body, p, a, h1, h2, h3, h4, h5, h6,
+small, em, strong, input, button
+  @extends .defaultType
+
+// Letterspacing
+// –––––––––––––––––––––––––––––––––––––––––––
+$tight-spacing = -.045em
+$snug-spacing = -.02em
+$more-spacing = .1em
+
+
+// Headings
+// –––––––––––––––––––––––––––––––––––––––––––
+
+h1
+  h1(4)
+h2
+  h2(3)
+h3
+  h3(2.25)
+h4
+  h4(1.75)
+h5
+  h5(1.375)
+h6
+  h6(1.125)
+
+h1, h2, h3, h4, h5, h6
+  display: block
+  margin: 1rem 0
+  font-weight: normal
+  line-height: 1.3em
+
+  // Remove the margin-top on all :first-child headers
+  // as the padding on the parent *almost* always makes up for it
+  &:first-child
+    margin-top: 0
+
+  // Standardize margin-bottom on headers
+  margin-bottom: 1rem
+
+  // links need to inherit the heading color
+  a
+    color: inherit
+
+
+// p
+//   font-size(16px)
+//   line-height: 1.5em
+
+
+// ligatures
+ligatures = false
+
+// vertical rhythm
+base-line-height = rem(24px)
+default-rhythm-border-style = solid
+relative-font-sizing = true
+round-to-nearest-half-line = false
+min-line-padding = rem(2px)

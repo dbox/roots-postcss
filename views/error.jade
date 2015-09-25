@@ -1,0 +1,14 @@
+extends layout
+
+block vars
+  head
+    //- overwrite any page specific meta here
+    - var bodyClass ='error'
+    - var pageTitle ='Something has gone awry'    
+    
+block content
+  section
+    div.container
+      article
+        h1 Something has gone awry!
+        a.btn(href="/") go home

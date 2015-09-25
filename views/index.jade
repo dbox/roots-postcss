@@ -1,0 +1,40 @@
+
+
+extends layout
+
+block vars
+  head
+    //- overwrite any page specific meta here
+    - var bodyClass ='home'  
+    - var pageTitle ='Post-css / Lost test'   
+
+block content
+  div.container
+  
+    section
+
+      h2 Lost grid / Post-css test
+      h5 Basic columns
+      :marked
+        ```
+        div
+          lost-column: 1/3
+        ```
+      div.third 1
+      div.third 2
+      div.third 3
+  
+      br
+      br
+      h5 Centering
+      :marked
+        ```
+        div
+          lost-center: 500px
+        ```      
+      div.center-demo
+        p I'm 500px centered.
+      
+      
+      
+      

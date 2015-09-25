@@ -1,0 +1,14 @@
+extends layout
+
+block vars
+  head
+    //- overwrite any page specific meta here
+    - var bodyClass ='about'
+    - var pageTitle ='This is the about page'    
+
+block content
+  section
+    div.container
+      :marked
+        ### This is the about page. Notice the clean url.
+        Go [back home](/) or to a [broken link](foo) to test out 404 page functionality.

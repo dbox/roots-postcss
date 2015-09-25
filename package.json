@@ -1,0 +1,31 @@
+{
+  "name": "roots-postcss",
+  "description": "For jump-starting new static builds",
+  "version": "0.0.0",
+  "private": true,
+  "contributors": [
+    "Daniel Box <danielbox@gmail.com>"
+  ],
+  "license": "none",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbox/roots-postcss.git"
+  },
+  "dependencies": {
+    "autoprefixer-stylus": "0.7.x",
+    "axis": "^0.4.1",
+    "coffee-script": "1.9.x",
+    "css-pipeline": "0.2.x",
+    "jade": "^1.11.0",
+    "js-pipeline": "0.2.x",
+    "jstransformer-marked": "0.0.2",
+    "marked": "0.3.x",
+    "postcss": "^4.1.15",
+    "roots": "^3.1.0",
+    "rupture": "0.6.x",
+    "stylus": "0.51.x"
+  },
+  "devDependencies": {
+    "lost": "^6.5.0"
+  }
+}

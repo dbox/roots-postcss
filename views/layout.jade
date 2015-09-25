@@ -1,0 +1,47 @@
+doctype html
+html
+
+  block vars
+
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='#{siteDescription}')
+    meta(name='author', content= "#{siteAuthor}")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    
+    //- favicon
+    //-
+    link(rel='icon', type='image/ico', href='favicon.ico')
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')  
+      
+    //- OG tags
+    meta(property='og:title', content='#{ogTitle}')
+    meta(property='og:type', content='#{ogType}')
+    meta(property='og:url', content='#{ogUrl}')
+    meta(property='og:image', content='#{ogImg}')
+    meta(property='og:description', content='#{ogDescription}')    
+    
+    //- twitter card
+    meta(name='twitter:card', content='#{twitterCard}')
+    meta(name='twitter:site', content='#{twitterSite}')
+    meta(name='twitter:creator', content='#{twitterCreator}')
+    meta(name='twitter:title', content='#{twitterTitle}')
+    meta(name='twitter:description', content='#{twitterDescription}') 
+    meta(name='twitter:image:src', content='#{twitterImgSrc}')    
+    title= pageTitle
+    != css()
+
+  body(class='#{bodyClass}') 
+  
+    //- Header
+    block header
+      include _partials/header
+      
+    //- Site Content  
+    block content
+      
+    block footer
+      include _partials/footer
+
+    != js()

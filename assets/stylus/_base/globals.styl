@@ -1,0 +1,59 @@
+//
+// Global styles and fun stuff
+// –––––––––––––––––––––––––––––––––––––––––––
+
+// Variables
+$maxSiteWidth = 1140px
+$desktopWidth = 940px
+$tabletWidth  = 720px
+$mobileWidth  = 100%
+
+$base-font-size         = 16px
+$global-border-radius   = 4px
+
+// Repsonive scale, reference: http://jenius.github.io/rupture/
+$scale           = 0px 768px 992px 1200px
+$mobile-cutoff   = 768px
+$tablet-cutoff   = 992px
+$desktop-cutoff  = 1200px
+
+// custom image base path for roots mixins
+img-path = ''
+
+
+// support for old IE
+support-for-ie = false
+
+// progressive IE (http://css3pie.com/)
+pie-enabled = false
+pie-path = '/pie.htc'
+
+//
+// Global layout
+// –––––––––––––––––––––
+
+body, html
+  margin: 0
+  padding: 0
+
+// Main responsive template styles here
+.container
+  position: relative
+  clear: both
+  center($maxSiteWidth)
+  padding: 0 4%
+  cf()
+
+  +below(4)
+    max-width: 100%
+
+//
+// Utility classes
+// –––––––––––––––––––––
+
+.circle
+  border-radius: 50%
+
+nav[role='navigation']
+  ul
+    inline-list()
